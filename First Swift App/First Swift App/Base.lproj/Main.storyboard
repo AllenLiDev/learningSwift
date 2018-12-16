@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,45 +15,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="First_Swift_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-YH-vwl">
-                                <rect key="frame" x="16" y="20" width="343" height="96"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="😛"/>
-                                <connections>
-                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzd-3l-h9i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-Mq-2CN">
-                                <rect key="frame" x="150" y="285.5" width="75" height="96"/>
-                                <color key="backgroundColor" red="0.91376887635156567" green="1" blue="0.18059371033123683" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="😡"/>
-                                <connections>
-                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edR-OE-bbr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-1e-cZQ">
-                                <rect key="frame" x="16" y="551" width="343" height="96"/>
-                                <color key="backgroundColor" red="1" green="0.63201332941264909" blue="0.36377057286586034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="😴"/>
-                                <connections>
-                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u63-Rd-nRz"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auto Layout Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xj-q1-d1P">
-                                <rect key="frame" x="81" y="219" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ7-Dv-0BH">
-                                <rect key="frame" x="16" y="447" width="343" height="96"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ7-Dv-0BH">
+                                <rect key="frame" x="20" y="228" width="374" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.73852871139999998" green="0.96620899439999997" blue="0.23532347100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="😭"/>
@@ -61,34 +28,54 @@
                                     <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEM-eD-xS3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esa-YH-vwl">
+                                <rect key="frame" x="20" y="20" width="376" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="😛"/>
+                                <connections>
+                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bzd-3l-h9i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6Y-Mq-2CN">
+                                <rect key="frame" x="20" y="124" width="374" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91376887635156567" green="1" blue="0.18059371033123683" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="😡"/>
+                                <connections>
+                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edR-OE-bbr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottom label with contraint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2c-g8-qfR">
+                                <rect key="frame" x="191" y="695" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBs-1e-cZQ">
+                                <rect key="frame" x="20" y="332" width="374" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.63201332941264909" blue="0.36377057286586034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="😴"/>
+                                <connections>
+                                    <action selector="showMessageWithSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u63-Rd-nRz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerY" secondItem="Esa-YH-vwl" secondAttribute="centerY" id="2kp-fZ-2Md"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3nw-KG-NsB"/>
-                            <constraint firstItem="sZ7-Dv-0BH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CKw-dC-ORG"/>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DoK-tg-eR9"/>
-                            <constraint firstItem="Esa-YH-vwl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EIP-aP-gzA"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerY" secondItem="Esa-YH-vwl" secondAttribute="centerY" id="NVu-4L-CTy"/>
-                            <constraint firstItem="sZ7-Dv-0BH" firstAttribute="centerY" secondItem="Esa-YH-vwl" secondAttribute="centerY" id="Rd6-Vd-pbl"/>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RsW-jH-dyv"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UhN-eo-qgh"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UkA-VG-DYg"/>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WO1-og-87m"/>
-                            <constraint firstItem="sZ7-Dv-0BH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wjt-pQ-JqF"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerX" secondItem="Esa-YH-vwl" secondAttribute="centerX" id="YqH-eh-09l"/>
-                            <constraint firstItem="kBs-1e-cZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anF-n0-6gB"/>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerX" secondItem="Esa-YH-vwl" secondAttribute="centerX" id="dK5-hz-c8I"/>
-                            <constraint firstItem="I6Y-Mq-2CN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gG2-i3-5Vh"/>
-                            <constraint firstItem="Esa-YH-vwl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hHv-0m-DcZ"/>
-                            <constraint firstItem="sZ7-Dv-0BH" firstAttribute="centerX" secondItem="Esa-YH-vwl" secondAttribute="centerX" id="tgC-hS-Vc0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A2c-g8-qfR" secondAttribute="trailing" constant="18" id="jmq-72-dsN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A2c-g8-qfR" secondAttribute="bottom" constant="20" id="obz-Db-wuJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="52.173913043478265" y="26.90217391304348"/>
         </scene>
     </scenes>
 </document>
