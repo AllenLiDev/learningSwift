@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var restaurantNames = ["Tokyo Joes", "Minami", "Sushi California", "LukLak", "PokPok"]
+    var restaurantImages = ["Barrafina", "Bourke Street Bakery", "Homei", "Upstate", "Petite Oyster"]
+    
+    var perfersStatusBarHidden: Bool {
+        return true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantNames.count
     }
@@ -19,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         cell.textLabel?.text = restaurantNames[indexPath.row]
+        cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
         
         return cell
     }
