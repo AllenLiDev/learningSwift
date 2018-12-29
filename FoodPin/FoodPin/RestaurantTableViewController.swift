@@ -33,13 +33,18 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     var restaurantNames = ["Minami", "Ed & Guys", "Sushi Haro", "Steak Eats", "Burger Queen", "Coast", "Craft", "Tab & Barrel", "Shake Shack"]
+    var restaurantLocations = ["Vancouver", "Burnaby", "Vancouver", "Richmond", "Langley", "Lower Mainland", "Whistler", "Olympic Village", "Shack"]
+    var restaurantTypes = ["Sushi", "Burger & Fries", "Sushi", "Steak", "Fast Food", "Seafood", "Bar", "Bar", "BEST"]
+    var imageNames = ["Barrafina", "Cafe Deadend", "Cafe Loisl", "Donostia", "Five Leaves", "Homei", "For Kee Restaurant", "Traif", "Waffle & Wolf"]
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "datacell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
         cell.nameLabel?.text = restaurantNames[indexPath.row]
-        cell.thumbnailImageView?.image = UIImage(named: "restaurant")
+        cell.locationLabel?.text = restaurantLocations[indexPath.row]
+        cell.typeLabel?.text = restaurantTypes[indexPath.row]
+        cell.thumbnailImageView?.image = UIImage(named: imageNames[indexPath.row])
         
         return cell
     }
