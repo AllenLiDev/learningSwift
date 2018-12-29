@@ -9,10 +9,16 @@
 import UIKit
 
 class RestaurantTableViewController: UITableViewController {
-
+    
+    var restaurantNames = ["Minami", "Ed & Guys", "Sushi Haro", "Steak Eats", "Burger Queen", "Coast", "Craft", "Tab & Barrel", "Shake Shack"]
+    var restaurantLocations = ["Vancouver", "Burnaby", "Vancouver", "Richmond", "Langley", "Lower Mainland", "Whistler", "Olympic Village", "Shack"]
+    var restaurantTypes = ["Sushi", "Burger & Fries", "Sushi", "Steak", "Fast Food", "Seafood", "Bar", "Bar", "BEST"]
+    var imageNames = ["Barrafina", "Cafe Deadend", "Cafe Loisl", "Donostia", "Five Leaves", "Homei", "For Kee Restaurant", "Traif", "Waffle & Wolf"]
+    var restaurantVisted = Array(repeating: false, count: 9)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.cellLayoutMarginsFollowReadableWidth = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -32,11 +38,6 @@ class RestaurantTableViewController: UITableViewController {
         return restaurantNames.count
     }
     
-    var restaurantNames = ["Minami", "Ed & Guys", "Sushi Haro", "Steak Eats", "Burger Queen", "Coast", "Craft", "Tab & Barrel", "Shake Shack"]
-    var restaurantLocations = ["Vancouver", "Burnaby", "Vancouver", "Richmond", "Langley", "Lower Mainland", "Whistler", "Olympic Village", "Shack"]
-    var restaurantTypes = ["Sushi", "Burger & Fries", "Sushi", "Steak", "Fast Food", "Seafood", "Bar", "Bar", "BEST"]
-    var imageNames = ["Barrafina", "Cafe Deadend", "Cafe Loisl", "Donostia", "Five Leaves", "Homei", "For Kee Restaurant", "Traif", "Waffle & Wolf"]
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "datacell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
@@ -46,8 +47,51 @@ class RestaurantTableViewController: UITableViewController {
         cell.typeLabel?.text = restaurantTypes[indexPath.row]
         cell.thumbnailImageView?.image = UIImage(named: imageNames[indexPath.row])
         
+        cell.accessoryType = restaurantVisted[indexPath.row] ? .checkmark : .none
+        
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let optionMenu = UIAlertController(title: nil, message: "What would you like to do?", preferredStyle: .actionSheet)
+        
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
+        
+        let callActionHandler = { (action:UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, This feature is currently unavailable", preferredStyle: .alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertMessage, animated: true, completion: nil)
+        }
+        
+        let callAction = UIAlertAction(title: "Call" + "1-800-345-\(indexPath.row)", style: .default, handler: callActionHandler)
+        let checkInAction = UIAlertAction(title: "Check In", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            self.restaurantVisted[indexPath.row] = true
+        })
+        let uncheckACtion = UIAlertAction(title: "Un-Check In", style: .default, handler: {(action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            self.restaurantVisted[indexPath.row] = false
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(checkInAction)
+        optionMenu.addAction(cancelAction)
+        optionMenu.addAction(uncheckACtion)
+        
+        present(optionMenu, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
